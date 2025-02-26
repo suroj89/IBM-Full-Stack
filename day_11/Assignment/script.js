@@ -78,3 +78,33 @@ else {
     console.log("no output");
 }
 
+
+
+// Q5
+function reverseString(str) {
+    let reversed = "";
+    for (let char of str) {
+        reversed = char + reversed;
+    }
+    return reversed;
+}
+
+console.log(reverseString("suroj")); 
+
+
+// Q6
+
+function removeduplicates(arr) {
+    let array=[];
+
+    for (let i=0;i<arr.length;i++) {
+        if (array.indexOf(arr[i])===-1) {
+            array.push(arr[i]);
+
+        }
+    }
+    return array;
+}
+
+const originalarray = [3,9,78,9,45,90,56,90,9,30,60,6];
+console.log(removeduplicates(originalarray));
