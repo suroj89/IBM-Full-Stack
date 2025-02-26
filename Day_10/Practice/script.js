@@ -74,10 +74,9 @@ console.log(citrus); //Output: ["orange","mango"]
 console.log(fruits); //Output: ["apple","banana",'orange',"mango",'grape']
 
 // splice
-let fruits2 = ['apple', 'banana', 'orange', 'mango', 'grape'];
-let removedfru = fruits2.splice(2, 2, 'lemon', 'kiwi');
+let fruits2 = ["apple","banana","orange","mango","grape"];
+let removedfru = fruits2.splice(2,2,'lemon','kiwi');
 
 console.log(fruits2); //Output:["apple","banana","lemon",kiwi","grape"]
-console.log(removedfru); //Output: ["orange","mango"] 
-
+console.log(removedfru); //Output: ["orange","mango"]
 
