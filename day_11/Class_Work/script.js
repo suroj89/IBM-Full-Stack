@@ -97,7 +97,7 @@ for(let j=0; j<arr.length;j++) {
     console.log(arr[j], j);
 }
 
-let str = "Arup Debnath";
+let str = "suroj samanta";
 for(let i=0; i<str.length;i++) {
-    console.log("A"+str[i]+"B");
+    console.log("s"+str[i]+"r");
 }

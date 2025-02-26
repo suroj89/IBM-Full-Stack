@@ -108,3 +108,18 @@ function removeduplicates(arr) {
 
 const originalarray = [3,9,78,9,45,90,56,90,9,30,60,6];
 console.log(removeduplicates(originalarray));
+
+// Q7
+
+const wordarr=["javscript","programming","function","Hosting","surojsamanta"]
+let longest="";
+for (const word of wordarr){
+    if(word.length> longest.length){
+        longest=word;
+    }
+}
+console.log(longest)
+
+
+
+
