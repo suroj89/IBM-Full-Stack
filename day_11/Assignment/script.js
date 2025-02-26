@@ -1,59 +1,80 @@
-// const student={
-//     name:"Suroj Samanta",
-//     rollNumber:29,
-//     marks:{
-//         Math:84,
-//         Science:45,
-//         English:70,
-//         History:68
-//     },
-//     getAverageMarks:function(){
-//         // Calculate and return average marks
-//         let totalMarks=0;
-//         let subjectCount=0;
-//         for (let subject in this.marks){
-//             totalMarks+=this.marks[subject];
-//             subjectCount++;
-//         }
-//         return totalMarks/subjectCount;
-//     },
-//     checkPassOrFail:function(){
-//         // Check if passed or failed
-//         return this.getAverageMarks()>40?"Passed":"Failed";
-//     }
-// };
+// Q1
 
-// console.log(student.getAverageMarks()); //Output:66.75
-// console.log(student.checkPassOrFail()); //Output:"Passed"
-//############################################################################################
-
-//Q2
-
-const library = {
-    books: {
-        "Atomic Habits": { author: "James Clear", availableCopies: 3 },
-        "The Alchemist": { author: "Paulo Coelho", availableCopies: 5 },
+const student={
+    name:"suroj samanta",
+    rollNumber:29,
+    marks: {
+        Math:60,
+        Science:79,
+        English:76,
+        History:68
     },
-    borrowBook: function(bookName) {
-        if (this.books[bookName] && this.books[bookName].availableCopies > 0) {
-            this.books[bookName].availableCopies--;
-            console.log(`You have borrowed "${bookName}".`);
-        } else {
-            console.log(`Sorry, "${bookName}" is not available or out of stock.`);
-        }
+    getaveragemarks:function() {
+        const marks=Object.values(this.marks);
+        const total=marks.reduce((sum,mark)=>sum+mark,0);
+        return total/marks.length;
     },
-    returnBook: function(bookName) {
-        if (this.books[bookName]) {
-            this.books[bookName].availableCopies++;
-            console.log(`You have returned "${bookName}".`);
-        } else {
-            console.log(`"${bookName}" is not a part of this library.`);
-        }
+    CheckpassOrfail:function() {
+        return this.getaveragemarks()>40?"Pass":"Fail";
     }
 };
 
-library.borrowBook("Atomic Habits");
-console.log(library.books["Atomic Habits"].availableCopies); // Output:2
+console.log(student. getaveragemarks());
+console.log(student.CheckpassOrfail());
 
-library.returnBook("Atomic Habits");
-console.log(library.books["Atomic Habits"].availableCopies); // Output:3
+
+
+
+// q2
+
+const library={
+    books:{
+        "pather panchali":{ author: "Bibhutibhushan Bandhopadhyay" ,available:3},
+        "Gitanjali":{author:"Rabindranath Tagore",available:5}
+    },
+    BorrowBook:function(bookname){
+        if(this.books[bookname] && this.books[bookname].available>0){
+            this.books[bookname].available--;
+            console.log(`you borrowed ${bookname}`);
+        }else{
+            console.log("Sorry this book is not available")
+        }
+    },
+    ReturnBook:function(bookname){
+        if(this.books[bookname]){
+            this.books[bookname].available++;
+            console.log(`you returened ${bookname}`)
+        }else{
+            console.log("Invalid book");
+        }
+    }
+};
+library.BorrowBook("pather panchali")
+console.log((library.books["Gitanjali"].available));
+
+
+// Q3
+function generatetable(num,num2) {
+    for (let i=1;i<=num2;i++) {
+        console.log(`${num}x${i}=${num*i}`);
+    }
+}
+generatetable(10,10);
+
+// Q4
+
+// let num = prompt("Enter a number");
+var num=90;
+if(num%3 ===0){
+    console.log("Fizz");
+}
+else if(num %5===0){
+    console.log("Buzz");
+}
+else if(num%5===0 && num%3===0) {
+    console.log("Fizz Buzz");
+}
+else {
+    console.log("no output");
+}
+
