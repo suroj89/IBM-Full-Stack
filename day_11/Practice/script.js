@@ -1,5 +1,6 @@
 
 console.log(this)
+console.log(suroj);
 
 let obj={
     name:"surojsamanta",
