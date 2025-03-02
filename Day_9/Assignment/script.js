@@ -25,8 +25,6 @@ for (const word of wordarr){
 console.log(longest)
 
 
-
-
 //q3
 
 function testScope(){
